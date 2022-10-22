@@ -1,0 +1,2 @@
+ydlidar_ros_driver-master
+-DCATKIN_DEVEL_PREFIX=/home/chranos/ros_drone_ws/ROS_drone/devel -DCMAKE_INSTALL_PREFIX=/home/chranos/ros_drone_ws/ROS_drone/install -G Unix Makefiles

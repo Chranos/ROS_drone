@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/chranos/ros_drone_ws/ROS_drone/install/setup.sh
