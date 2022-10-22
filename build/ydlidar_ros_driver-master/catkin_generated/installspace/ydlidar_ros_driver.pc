@@ -1,4 +1,4 @@
-prefix=/home/chranos/ROS_Drone_ws/install
+prefix=/home/chranos/ROS/ROS_drone/install
 
 Name: ydlidar_ros_driver
 Description: Description of ydlidar_ros_driver

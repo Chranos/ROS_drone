@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chranos/ROS_Drone_ws/src
+CMAKE_SOURCE_DIR = /home/chranos/ROS/ROS_drone/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chranos/ROS_Drone_ws/build
+CMAKE_BINARY_DIR = /home/chranos/ROS/ROS_drone/build
 
 # Utility rule file for roscpp_generate_messages_py.
 
@@ -63,10 +63,10 @@ ydlidar_ros_driver-master/CMakeFiles/roscpp_generate_messages_py.dir/build: rosc
 .PHONY : ydlidar_ros_driver-master/CMakeFiles/roscpp_generate_messages_py.dir/build
 
 ydlidar_ros_driver-master/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	cd /home/chranos/ROS_Drone_ws/build/ydlidar_ros_driver-master && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/chranos/ROS/ROS_drone/build/ydlidar_ros_driver-master && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : ydlidar_ros_driver-master/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 ydlidar_ros_driver-master/CMakeFiles/roscpp_generate_messages_py.dir/depend:
-	cd /home/chranos/ROS_Drone_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chranos/ROS_Drone_ws/src /home/chranos/ROS_Drone_ws/src/ydlidar_ros_driver-master /home/chranos/ROS_Drone_ws/build /home/chranos/ROS_Drone_ws/build/ydlidar_ros_driver-master /home/chranos/ROS_Drone_ws/build/ydlidar_ros_driver-master/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chranos/ROS/ROS_drone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chranos/ROS/ROS_drone/src /home/chranos/ROS/ROS_drone/src/ydlidar_ros_driver-master /home/chranos/ROS/ROS_drone/build /home/chranos/ROS/ROS_drone/build/ydlidar_ros_driver-master /home/chranos/ROS/ROS_drone/build/ydlidar_ros_driver-master/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ydlidar_ros_driver-master/CMakeFiles/roscpp_generate_messages_py.dir/depend
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chranos/ROS_Drone_ws/src
+CMAKE_SOURCE_DIR = /home/chranos/ROS/ROS_drone/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chranos/ROS_Drone_ws/build
+CMAKE_BINARY_DIR = /home/chranos/ROS/ROS_drone/build
 
 # Utility rule file for tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/chranos/ROS_Drone_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chranos/ROS_Drone_ws/src /home/chranos/ROS_Drone_ws/src /home/chranos/ROS_Drone_ws/build /home/chranos/ROS_Drone_ws/build /home/chranos/ROS_Drone_ws/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chranos/ROS/ROS_drone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chranos/ROS/ROS_drone/src /home/chranos/ROS/ROS_drone/src /home/chranos/ROS/ROS_drone/build /home/chranos/ROS/ROS_drone/build /home/chranos/ROS/ROS_drone/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

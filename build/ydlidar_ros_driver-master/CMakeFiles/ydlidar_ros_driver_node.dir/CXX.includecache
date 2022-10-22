@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/chranos/ROS_Drone_ws/src/ydlidar_ros_driver-master/src/ydlidar_ros_driver.cpp
+/home/chranos/ROS/ROS_drone/src/ydlidar_ros_driver-master/src/ydlidar_ros_driver.cpp
 ros/ros.h
 -
 sensor_msgs/LaserScan.h
-/home/chranos/ROS_Drone_ws/src/ydlidar_ros_driver-master/src/sensor_msgs/LaserScan.h
+/home/chranos/ROS/ROS_drone/src/ydlidar_ros_driver-master/src/sensor_msgs/LaserScan.h
 sensor_msgs/PointCloud.h
-/home/chranos/ROS_Drone_ws/src/ydlidar_ros_driver-master/src/sensor_msgs/PointCloud.h
+/home/chranos/ROS/ROS_drone/src/ydlidar_ros_driver-master/src/sensor_msgs/PointCloud.h
 std_srvs/Empty.h
-/home/chranos/ROS_Drone_ws/src/ydlidar_ros_driver-master/src/std_srvs/Empty.h
+/home/chranos/ROS/ROS_drone/src/ydlidar_ros_driver-master/src/std_srvs/Empty.h
 src/CYdLidar.h
-/home/chranos/ROS_Drone_ws/src/ydlidar_ros_driver-master/src/src/CYdLidar.h
+/home/chranos/ROS/ROS_drone/src/ydlidar_ros_driver-master/src/src/CYdLidar.h
 ydlidar_config.h
-/home/chranos/ROS_Drone_ws/src/ydlidar_ros_driver-master/src/ydlidar_config.h
+/home/chranos/ROS/ROS_drone/src/ydlidar_ros_driver-master/src/ydlidar_config.h
 limits
 -
 

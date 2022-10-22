@@ -67,14 +67,14 @@ set(ydlidar_ros_driver_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ydlidar_ros_driver_SOURCE_PREFIX /home/chranos/ROS_Drone_ws/src/ydlidar_ros_driver-master)
-  set(ydlidar_ros_driver_DEVEL_PREFIX /home/chranos/ROS_Drone_ws/devel)
+  set(ydlidar_ros_driver_SOURCE_PREFIX /home/chranos/ROS/ROS_drone/src/ydlidar_ros_driver-master)
+  set(ydlidar_ros_driver_DEVEL_PREFIX /home/chranos/ROS/ROS_drone/devel)
   set(ydlidar_ros_driver_INSTALL_PREFIX "")
   set(ydlidar_ros_driver_PREFIX ${ydlidar_ros_driver_DEVEL_PREFIX})
 else()
   set(ydlidar_ros_driver_SOURCE_PREFIX "")
   set(ydlidar_ros_driver_DEVEL_PREFIX "")
-  set(ydlidar_ros_driver_INSTALL_PREFIX /home/chranos/ROS_Drone_ws/install)
+  set(ydlidar_ros_driver_INSTALL_PREFIX /home/chranos/ROS/ROS_drone/install)
   set(ydlidar_ros_driver_PREFIX ${ydlidar_ros_driver_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/chranos/ROS_Drone_ws/install/lib;/home/chranos/ros_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/chranos/ROS/ROS_drone/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
