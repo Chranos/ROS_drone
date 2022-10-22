@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ydlidar_ros_driver_node.dir/src/ydlidar_ros_driver.cpp.o"
-  "/home/chranos/ros_drone_ws/ROS_drone/devel/lib/ydlidar_ros_driver/ydlidar_ros_driver_node.pdb"
-  "/home/chranos/ros_drone_ws/ROS_drone/devel/lib/ydlidar_ros_driver/ydlidar_ros_driver_node"
+  "/home/chranos/ROS_Drone_ws/devel/lib/ydlidar_ros_driver/ydlidar_ros_driver_node.pdb"
+  "/home/chranos/ROS_Drone_ws/devel/lib/ydlidar_ros_driver/ydlidar_ros_driver_node"
 )
 
 # Per-language clean rules from dependency scanning.

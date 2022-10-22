@@ -1,8 +1,8 @@
-# Install script for directory: /home/chranos/ros_drone_ws/ROS_drone/src/ydlidar_ros_driver-master
+# Install script for directory: /home/chranos/ROS_Drone_ws/src/ydlidar_ros_driver-master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chranos/ros_drone_ws/ROS_drone/install")
+  set(CMAKE_INSTALL_PREFIX "/home/chranos/ROS_Drone_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/chranos/ros_drone_ws/ROS_drone/build/ydlidar_ros_driver-master/catkin_generated/installspace/ydlidar_ros_driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/chranos/ROS_Drone_ws/build/ydlidar_ros_driver-master/catkin_generated/installspace/ydlidar_ros_driver.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ydlidar_ros_driver/cmake" TYPE FILE FILES
-    "/home/chranos/ros_drone_ws/ROS_drone/build/ydlidar_ros_driver-master/catkin_generated/installspace/ydlidar_ros_driverConfig.cmake"
-    "/home/chranos/ros_drone_ws/ROS_drone/build/ydlidar_ros_driver-master/catkin_generated/installspace/ydlidar_ros_driverConfig-version.cmake"
+    "/home/chranos/ROS_Drone_ws/build/ydlidar_ros_driver-master/catkin_generated/installspace/ydlidar_ros_driverConfig.cmake"
+    "/home/chranos/ROS_Drone_ws/build/ydlidar_ros_driver-master/catkin_generated/installspace/ydlidar_ros_driverConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ydlidar_ros_driver" TYPE FILE FILES "/home/chranos/ros_drone_ws/ROS_drone/src/ydlidar_ros_driver-master/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ydlidar_ros_driver" TYPE FILE FILES "/home/chranos/ROS_Drone_ws/src/ydlidar_ros_driver-master/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ydlidar_ros_driver/ydlidar_ros_driver_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ydlidar_ros_driver" TYPE EXECUTABLE FILES "/home/chranos/ros_drone_ws/ROS_drone/devel/lib/ydlidar_ros_driver/ydlidar_ros_driver_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ydlidar_ros_driver" TYPE EXECUTABLE FILES "/home/chranos/ROS_Drone_ws/devel/lib/ydlidar_ros_driver/ydlidar_ros_driver_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ydlidar_ros_driver/ydlidar_ros_driver_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ydlidar_ros_driver/ydlidar_ros_driver_node")
     file(RPATH_CHANGE

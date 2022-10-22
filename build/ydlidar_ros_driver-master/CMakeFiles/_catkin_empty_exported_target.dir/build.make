@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chranos/ros_drone_ws/ROS_drone/src
+CMAKE_SOURCE_DIR = /home/chranos/ROS_Drone_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chranos/ros_drone_ws/ROS_drone/build
+CMAKE_BINARY_DIR = /home/chranos/ROS_Drone_ws/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ ydlidar_ros_driver-master/CMakeFiles/_catkin_empty_exported_target.dir/build: _c
 .PHONY : ydlidar_ros_driver-master/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 ydlidar_ros_driver-master/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/chranos/ros_drone_ws/ROS_drone/build/ydlidar_ros_driver-master && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/chranos/ROS_Drone_ws/build/ydlidar_ros_driver-master && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : ydlidar_ros_driver-master/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 ydlidar_ros_driver-master/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/chranos/ros_drone_ws/ROS_drone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chranos/ros_drone_ws/ROS_drone/src /home/chranos/ros_drone_ws/ROS_drone/src/ydlidar_ros_driver-master /home/chranos/ros_drone_ws/ROS_drone/build /home/chranos/ros_drone_ws/ROS_drone/build/ydlidar_ros_driver-master /home/chranos/ros_drone_ws/ROS_drone/build/ydlidar_ros_driver-master/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chranos/ROS_Drone_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chranos/ROS_Drone_ws/src /home/chranos/ROS_Drone_ws/src/ydlidar_ros_driver-master /home/chranos/ROS_Drone_ws/build /home/chranos/ROS_Drone_ws/build/ydlidar_ros_driver-master /home/chranos/ROS_Drone_ws/build/ydlidar_ros_driver-master/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ydlidar_ros_driver-master/CMakeFiles/_catkin_empty_exported_target.dir/depend
 
