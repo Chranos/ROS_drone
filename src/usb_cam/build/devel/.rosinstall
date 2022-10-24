@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/chranos/ROS/ROS_drone/src/usb_cam/build/devel/setup.sh
