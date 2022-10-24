@@ -1,0 +1,8 @@
+prefix=/home/chranos/ROS/ROS_drone/install
+
+Name: rqt_annotation_data
+Description: Description of rqt_annotation_data
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

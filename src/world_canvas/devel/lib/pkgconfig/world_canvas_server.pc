@@ -1,0 +1,8 @@
+prefix=/home/yahboom/software/world_canvas/devel
+
+Name: world_canvas_server
+Description: Description of world_canvas_server
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

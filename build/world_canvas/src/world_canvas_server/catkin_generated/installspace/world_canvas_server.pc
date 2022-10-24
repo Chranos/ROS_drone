@@ -1,0 +1,8 @@
+prefix=/home/chranos/ROS/ROS_drone/install
+
+Name: world_canvas_server
+Description: Description of world_canvas_server
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

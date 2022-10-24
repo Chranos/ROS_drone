@@ -47,6 +47,12 @@ Boost_DATE_TIME_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date
 //The directory containing a CMake configuration file for Boost.
 Boost_DIR:PATH=Boost_DIR-NOTFOUND
 
+//Boost filesystem library (debug)
+Boost_FILESYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+
+//Boost filesystem library (release)
+Boost_FILESYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+
 //Path to a file.
 Boost_INCLUDE_DIR:PATH=/usr/include
 
@@ -298,8 +304,26 @@ LSB_FOUND:BOOL=TRUE
 //Path to a program.
 LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 
+//Path to a file.
+MongoDB_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+MongoDB_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libmongoclient.so
+
+//Path to a file.
+MongoDB_dbclientinterface_Path:PATH=/usr/include
+
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
+
+//Path to a library.
+OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
+
+//Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OPENSSL_SSL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libssl.so
 
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
@@ -510,7 +534,7 @@ kdl_conversions_DIR:PATH=/opt/ros/melodic/share/kdl_conversions/cmake
 kdl_parser_DIR:PATH=/opt/ros/melodic/share/kdl_parser/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
@@ -639,6 +663,12 @@ rostest_DIR:PATH=/opt/ros/melodic/share/rostest/cmake
 rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
 
 //Value Computed by CMake
+rqt_annotation_data_BINARY_DIR:STATIC=/home/chranos/ROS/ROS_drone/build/world_canvas/src/world_canvas_tools/rqt_annotation_data
+
+//Value Computed by CMake
+rqt_annotation_data_SOURCE_DIR:STATIC=/home/chranos/ROS/ROS_drone/src/world_canvas/src/world_canvas_tools/rqt_annotation_data
+
+//Value Computed by CMake
 rrt_exploration_BINARY_DIR:STATIC=/home/chranos/ROS/ROS_drone/build/rrt_exploration
 
 //Value Computed by CMake
@@ -731,6 +761,9 @@ transbot_nav_SOURCE_DIR:STATIC=/home/chranos/ROS/ROS_drone/src/transbot_nav
 //Dependencies for the target
 ukf_LIB_DEPENDS:STATIC=general;filter_base;general;/opt/ros/melodic/lib/libdiagnostic_updater.so;general;/opt/ros/melodic/lib/libeigen_conversions.so;general;/opt/ros/melodic/lib/liborocos-kdl.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
+//The directory containing a CMake configuration file for unique_id.
+unique_id_DIR:PATH=/opt/ros/melodic/share/unique_id/cmake
+
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/melodic/share/urdf/cmake
 
@@ -749,11 +782,71 @@ uuid_msgs_DIR:PATH=/opt/ros/melodic/share/uuid_msgs/cmake
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/melodic/share/visualization_msgs/cmake
 
+//Value Computed by CMake
+warehouse_ros_BINARY_DIR:STATIC=/home/chranos/ROS/ROS_drone/build/world_canvas/src/warehouse_ros
+
 //The directory containing a CMake configuration file for warehouse_ros.
-warehouse_ros_DIR:PATH=/opt/ros/melodic/share/warehouse_ros/cmake
+warehouse_ros_DIR:PATH=/home/chranos/ROS/ROS_drone/devel/share/warehouse_ros/cmake
+
+//Dependencies for the target
+warehouse_ros_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;
+
+//Value Computed by CMake
+warehouse_ros_SOURCE_DIR:STATIC=/home/chranos/ROS/ROS_drone/src/world_canvas/src/warehouse_ros
+
+//Value Computed by CMake
+warehouse_ros_mongo_BINARY_DIR:STATIC=/home/chranos/ROS/ROS_drone/build/world_canvas/src/warehouse_ros_mongo
+
+//Dependencies for the target
+warehouse_ros_mongo_LIB_DEPENDS:STATIC=general;warehouse_ros;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;general;/usr/lib/x86_64-linux-gnu/libmongoclient.so;general;/usr/lib/x86_64-linux-gnu/libssl.so;general;/usr/lib/x86_64-linux-gnu/libcrypto.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;
+
+//Value Computed by CMake
+warehouse_ros_mongo_SOURCE_DIR:STATIC=/home/chranos/ROS/ROS_drone/src/world_canvas/src/warehouse_ros_mongo
+
+//Dependencies for the target
+world_canvas_client_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
+
+//Value Computed by CMake
+world_canvas_client_cpp_BINARY_DIR:STATIC=/home/chranos/ROS/ROS_drone/build/world_canvas/src/world_canvas_libs/world_canvas_client_cpp
+
+//The directory containing a CMake configuration file for world_canvas_client_cpp.
+world_canvas_client_cpp_DIR:PATH=/home/chranos/ROS/ROS_drone/devel/share/world_canvas_client_cpp/cmake
+
+//Value Computed by CMake
+world_canvas_client_cpp_SOURCE_DIR:STATIC=/home/chranos/ROS/ROS_drone/src/world_canvas/src/world_canvas_libs/world_canvas_client_cpp
+
+//Value Computed by CMake
+world_canvas_client_examples_BINARY_DIR:STATIC=/home/chranos/ROS/ROS_drone/build/world_canvas/src/world_canvas_libs/world_canvas_client_examples
+
+//Value Computed by CMake
+world_canvas_client_examples_SOURCE_DIR:STATIC=/home/chranos/ROS/ROS_drone/src/world_canvas/src/world_canvas_libs/world_canvas_client_examples
+
+//Value Computed by CMake
+world_canvas_client_py_BINARY_DIR:STATIC=/home/chranos/ROS/ROS_drone/build/world_canvas/src/world_canvas_libs/world_canvas_client_py
+
+//Value Computed by CMake
+world_canvas_client_py_SOURCE_DIR:STATIC=/home/chranos/ROS/ROS_drone/src/world_canvas/src/world_canvas_libs/world_canvas_client_py
+
+//Value Computed by CMake
+world_canvas_msgs_BINARY_DIR:STATIC=/home/chranos/ROS/ROS_drone/build/world_canvas/src/world_canvas_msgs
 
 //The directory containing a CMake configuration file for world_canvas_msgs.
-world_canvas_msgs_DIR:PATH=world_canvas_msgs_DIR-NOTFOUND
+world_canvas_msgs_DIR:PATH=/home/chranos/ROS/ROS_drone/devel/share/world_canvas_msgs/cmake
+
+//Value Computed by CMake
+world_canvas_msgs_SOURCE_DIR:STATIC=/home/chranos/ROS/ROS_drone/src/world_canvas/src/world_canvas_msgs
+
+//Value Computed by CMake
+world_canvas_server_BINARY_DIR:STATIC=/home/chranos/ROS/ROS_drone/build/world_canvas/src/world_canvas_server
+
+//Value Computed by CMake
+world_canvas_server_SOURCE_DIR:STATIC=/home/chranos/ROS/ROS_drone/src/world_canvas/src/world_canvas_server
+
+//Value Computed by CMake
+world_canvas_utils_BINARY_DIR:STATIC=/home/chranos/ROS/ROS_drone/build/world_canvas/src/world_canvas_libs/world_canvas_utils
+
+//Value Computed by CMake
+world_canvas_utils_SOURCE_DIR:STATIC=/home/chranos/ROS/ROS_drone/src/world_canvas/src/world_canvas_libs/world_canvas_utils
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
@@ -766,6 +859,9 @@ ydlidar_ros_driver_SOURCE_DIR:STATIC=/home/chranos/ROS/ROS_drone/src/ydlidar_ros
 
 //The directory containing a CMake configuration file for ydlidar_sdk.
 ydlidar_sdk_DIR:PATH=/usr/local/lib/cmake/ydlidar_sdk
+
+//The directory containing a CMake configuration file for yocs_msgs.
+yocs_msgs_DIR:PATH=/opt/ros/melodic/share/yocs_msgs/cmake
 
 
 ########################
@@ -786,6 +882,10 @@ Boost_DATE_TIME_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 Boost_DATE_TIME_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_DIR
 Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_DEBUG
+Boost_FILESYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_RELEASE
+Boost_FILESYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_INCLUDE_DIR
 Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_LIBRARY_DIR_DEBUG
@@ -909,7 +1009,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=24
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -954,6 +1054,8 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 EIGEN_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //Details about finding Eigen
 FIND_PACKAGE_MESSAGE_DETAILS_Eigen:INTERNAL=[/usr/include/eigen3][v()]
+//Details about finding OpenSSL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcrypto.so][/usr/include][v1.1.1()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding PythonInterp
@@ -980,6 +1082,16 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MongoDB_INCLUDE_DIR
+MongoDB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MongoDB_LIBRARIES
+MongoDB_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
+OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_INCLUDE_DIR
+OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_SSL_LIBRARY
+OPENSSL_SSL_LIBRARY-ADVANCED:INTERNAL=1
 PC_EIGEN_CFLAGS:INTERNAL=-I/usr/include/eigen3
 PC_EIGEN_CFLAGS_I:INTERNAL=
 PC_EIGEN_CFLAGS_OTHER:INTERNAL=
@@ -1103,7 +1215,7 @@ YDLIDAR_SDK_LIBRARY_DIRS-ADVANCED:INTERNAL=1
 //YDLIDAR_SDK library directories
 YDLIDAR_SDK_LIBRARY_DIRS:INTERNAL=
 //Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=atomic;chrono;date_time;signals;system;thread
+_Boost_COMPONENTS_SEARCHED:INTERNAL=atomic;chrono;date_time;filesystem;signals;system;thread
 //Last used Boost_INCLUDE_DIR value.
 _Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
 //Last used Boost_LIBRARY_DIR_DEBUG value.
@@ -1114,14 +1226,50 @@ _Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
 _Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+_OPENSSL_CFLAGS:INTERNAL=
+_OPENSSL_CFLAGS_I:INTERNAL=
+_OPENSSL_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_FOUND:INTERNAL=1
+_OPENSSL_INCLUDEDIR:INTERNAL=/usr/include
+_OPENSSL_INCLUDE_DIRS:INTERNAL=
+_OPENSSL_LDFLAGS:INTERNAL=-lssl;-lcrypto
+_OPENSSL_LDFLAGS_OTHER:INTERNAL=
+_OPENSSL_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+_OPENSSL_LIBRARIES:INTERNAL=ssl;crypto
+_OPENSSL_LIBRARY_DIRS:INTERNAL=
+_OPENSSL_LIBS:INTERNAL=
+_OPENSSL_LIBS_L:INTERNAL=
+_OPENSSL_LIBS_OTHER:INTERNAL=
+_OPENSSL_LIBS_PATHS:INTERNAL=
+_OPENSSL_PREFIX:INTERNAL=/usr
+_OPENSSL_STATIC_CFLAGS:INTERNAL=
+_OPENSSL_STATIC_CFLAGS_I:INTERNAL=
+_OPENSSL_STATIC_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_STATIC_INCLUDE_DIRS:INTERNAL=
+_OPENSSL_STATIC_LDFLAGS:INTERNAL=-lssl;-lcrypto;-ldl;-pthread
+_OPENSSL_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+_OPENSSL_STATIC_LIBDIR:INTERNAL=
+_OPENSSL_STATIC_LIBRARIES:INTERNAL=ssl;crypto;dl
+_OPENSSL_STATIC_LIBRARY_DIRS:INTERNAL=
+_OPENSSL_STATIC_LIBS:INTERNAL=
+_OPENSSL_STATIC_LIBS_L:INTERNAL=
+_OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
+_OPENSSL_STATIC_LIBS_PATHS:INTERNAL=
+_OPENSSL_VERSION:INTERNAL=1.1.1
+_OPENSSL_openssl_INCLUDEDIR:INTERNAL=
+_OPENSSL_openssl_LIBDIR:INTERNAL=
+_OPENSSL_openssl_PREFIX:INTERNAL=
+_OPENSSL_openssl_VERSION:INTERNAL=
 __pkg_config_arguments_PC_EIGEN:INTERNAL=eigen3
 __pkg_config_arguments_YAML:INTERNAL=yaml-cpp
 __pkg_config_arguments_YAML_CPP:INTERNAL=yaml-cpp
+__pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
 __pkg_config_arguments_avcodec:INTERNAL=libavcodec;REQUIRED
 __pkg_config_arguments_swscale:INTERNAL=libswscale;REQUIRED
 __pkg_config_checked_PC_EIGEN:INTERNAL=1
 __pkg_config_checked_YAML:INTERNAL=1
 __pkg_config_checked_YAML_CPP:INTERNAL=1
+__pkg_config_checked__OPENSSL:INTERNAL=1
 __pkg_config_checked_avcodec:INTERNAL=1
 __pkg_config_checked_swscale:INTERNAL=1
 avcodec_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
@@ -1158,7 +1306,7 @@ avcodec_libavcodec_INCLUDEDIR:INTERNAL=
 avcodec_libavcodec_LIBDIR:INTERNAL=
 avcodec_libavcodec_PREFIX:INTERNAL=
 avcodec_libavcodec_VERSION:INTERNAL=
-prefix_result:INTERNAL=
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 swscale_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 swscale_CFLAGS_I:INTERNAL=
 swscale_CFLAGS_OTHER:INTERNAL=

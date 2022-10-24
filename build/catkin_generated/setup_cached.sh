@@ -7,4 +7,9 @@
 # new environment variables
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/chranos/ROS/ROS_drone/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/chranos/ROS/ROS_drone/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/chranos/ROS/ROS_drone/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/chranos/ROS/ROS_drone/build'
+export PYTHONPATH="/home/chranos/ROS/ROS_drone/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROS_PACKAGE_PATH="/home/chranos/ROS/ROS_drone/src:$ROS_PACKAGE_PATH"

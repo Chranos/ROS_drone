@@ -1,0 +1,8 @@
+prefix=/home/chranos/ROS/ROS_drone/devel
+
+Name: warehouse_ros_mongo
+Description: Description of warehouse_ros_mongo
+Version: 0.8.8
+Cflags: -I/home/chranos/ROS/ROS_drone/devel/include -I/home/chranos/ROS/ROS_drone/src/world_canvas/src/warehouse_ros_mongo/include -I/usr/include
+Libs: -L${prefix}/lib -lwarehouse_ros_mongo /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_filesystem.so /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_atomic.so /usr/lib/x86_64-linux-gnu/libpthread.so /usr/lib/x86_64-linux-gnu/libmongoclient.so
+Requires: roscpp rostime std_msgs

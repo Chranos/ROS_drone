@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"transbot_description\"
 
-CXX_INCLUDES = -I/home/chranos/ROS/ROS_drone/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -I/usr/include/OGRE 
+CXX_INCLUDES = -I/home/chranos/ROS/ROS_drone/devel/include -I/home/chranos/ROS/ROS_drone/src/world_canvas/src/warehouse_ros/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -I/usr/include/OGRE 
 

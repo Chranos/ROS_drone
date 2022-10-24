@@ -6,6 +6,9 @@ imu_filter_madgwick/CMakeFiles/imu_filter.dir/src/imu_filter.cpp.o: /home/chrano
 imu_filter_madgwick/CMakeFiles/imu_filter.dir/src/imu_filter.cpp.o: /home/chranos/ROS/ROS_drone/src/imu_filter_madgwick/src/imu_filter.cpp
 
 imu_filter_madgwick/CMakeFiles/imu_filter.dir/src/imu_filter_ros.cpp.o: /home/chranos/ROS/ROS_drone/devel/include/imu_filter_madgwick/ImuFilterMadgwickConfig.h
+imu_filter_madgwick/CMakeFiles/imu_filter.dir/src/imu_filter_ros.cpp.o: /home/chranos/ROS/ROS_drone/devel/include/transbot_msgs/Buzzer.h
+imu_filter_madgwick/CMakeFiles/imu_filter.dir/src/imu_filter_ros.cpp.o: /home/chranos/ROS/ROS_drone/devel/include/transbot_msgs/BuzzerRequest.h
+imu_filter_madgwick/CMakeFiles/imu_filter.dir/src/imu_filter_ros.cpp.o: /home/chranos/ROS/ROS_drone/devel/include/transbot_msgs/BuzzerResponse.h
 imu_filter_madgwick/CMakeFiles/imu_filter.dir/src/imu_filter_ros.cpp.o: /home/chranos/ROS/ROS_drone/src/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter.h
 imu_filter_madgwick/CMakeFiles/imu_filter.dir/src/imu_filter_ros.cpp.o: /home/chranos/ROS/ROS_drone/src/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter_ros.h
 imu_filter_madgwick/CMakeFiles/imu_filter.dir/src/imu_filter_ros.cpp.o: /home/chranos/ROS/ROS_drone/src/imu_filter_madgwick/include/imu_filter_madgwick/stateless_orientation.h

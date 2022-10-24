@@ -1,0 +1,2 @@
+warehouse_ros:warehouse_ros_mongo:world_canvas_libs/world_canvas_client_cpp:world_canvas_libs/world_canvas_client_examples:world_canvas_libs/world_canvas_client_py:world_canvas_libs/world_canvas_utils:world_canvas_msgs:world_canvas_server:world_canvas_tools/rqt_annotation_data
+-DCATKIN_DEVEL_PREFIX=/home/yahboom/software/world_canvas/devel -DCMAKE_INSTALL_PREFIX=/home/yahboom/software/world_canvas/install -G Unix Makefiles
