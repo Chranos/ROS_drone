@@ -1,0 +1,8 @@
+prefix=/home/chranos/ROS/ROS_drone/install
+
+Name: transbot_description
+Description: Description of transbot_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

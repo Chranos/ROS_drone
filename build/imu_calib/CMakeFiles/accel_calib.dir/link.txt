@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libaccel_calib.so -o /home/chranos/ROS/ROS_drone/devel/lib/libaccel_calib.so CMakeFiles/accel_calib.dir/src/accel_calib/accel_calib.cpp.o -lyaml-cpp 

@@ -1,0 +1,17 @@
+<launch>
+    <!-- 启动激光雷达节点-->
+    <!--arg name="lidar_type" default="a1" doc="lidar_type type [a1,a2,a3,s1,s2]"/>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch">
+        <arg name="lidar_type" value="$(arg lidar_type)"/>
+    </include-->
+    <include file="$(find ydlidar_ros_driver)/launch/X2.launch"/>
+    <!-- 动态调试工具节点-->
+<!--    <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure" output="screen"/>-->
+    <!-- 启动小车底盘驱动节点-->
+    <node pkg="transbot_bringup" type="transbot_driver.py" name="transbot_node" required="true" output="screen">
+        <param name="imu" value="/transbot/imu"/>
+        <param name="vel" value="/transbot/get_vel"/>
+    </node>
+    <!-- 手柄控制节点 -->
+    <include file="$(find transbot_ctrl)/launch/transbot_joy.launch"/>
+</launch>

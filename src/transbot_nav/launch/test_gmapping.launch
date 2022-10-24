@@ -1,0 +1,33 @@
+
+<launch>
+    <arg name="open_rviz" default="true"/>
+    <arg name="map_type" default="gmapping" doc="opt: gmapping,hector,karto,cartographer"/>
+    <arg name="temporalUpdate" default="-1.0" unless="$(eval arg('map_type') == 'gmapping')"/>
+    <arg name="frame_id" default="laser" if="$(eval arg('map_type') == 'gmapping')"/>
+    <arg name="scan_topic" default="scan" if="$(eval  arg('map_type') == 'gmapping')"/>
+    <arg name="view_map" default="test_map" if="$(eval arg('map_type') == 'gmapping')"/>
+
+    <group if="$(eval arg('map_type') == 'gmapping')">
+        <node pkg="transbot_nav" type="scan_compression.py" name="scan_compression"/>
+        <include file="$(find transbot_nav)/launch/library/gmapping.launch">
+            <arg name="scan_topic" value="$(arg scan_topic)" />
+            <arg name="temporalUpdate" value="$(arg temporalUpdate)" />
+        </include>
+    </group>
+    <group unless="$(eval arg('map_type') == 'gmapping')">
+        <include file="$(find cartographer_ros)/launch/laser.launch" if="$(eval arg('map_type') == 'cartographer')"/>
+        <include file="$(find transbot_nav)/launch/library/$(arg map_type).launch" unless="$(eval arg('map_type') == 'cartographer')"/>
+    </group>
+    <!-- 激光雷达的坐标系 -->
+    <node pkg="tf" type="static_transform_publisher" name="odom_to_base_footprint"
+          args="0 0 0 0 0 0  /odom /base_footprint  30"/>
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser"
+          args="0 0 0 0 0 0  /base_footprint /$(arg frame_id)  30"/>
+    <!-- rviz可视化节点 -->
+    <group if="$(arg open_rviz)">
+        <node pkg="rviz" type="rviz" name="rviz" required="true"
+              args="-d $(find transbot_nav)/rviz/test_s2_cartographer.rviz" if="$(eval arg('map_type') == 'cartographer')"/>
+        <node pkg="rviz" type="rviz" name="rviz" required="true"
+              args="-d $(find transbot_nav)/rviz/$(arg view_map).rviz" unless="$(eval arg('map_type') == 'cartographer')"/>
+    </group>
+</launch>

@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/chranos/ROS/ROS_drone/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -80,37 +68,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -134,6 +102,38 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,216 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-usb_cam/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : usb_cam/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: usb_cam/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/std_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_lisp: usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-.PHONY : std_srvs_generate_messages_lisp
-
-# fast build rule for target.
-std_srvs_generate_messages_lisp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-.PHONY : std_srvs_generate_messages_lisp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : usb_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: usb_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : usb_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: usb_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : usb_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: usb_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_cpp: usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-.PHONY : std_srvs_generate_messages_cpp
-
-# fast build rule for target.
-std_srvs_generate_messages_cpp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
-.PHONY : std_srvs_generate_messages_cpp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : usb_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: usb_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
 usb_cam/CMakeFiles/usb_cam_node.dir/rule:
 	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/usb_cam_node.dir/rule
 .PHONY : usb_cam/CMakeFiles/usb_cam_node.dir/rule
@@ -391,246 +181,6 @@ usb_cam_node: usb_cam/CMakeFiles/usb_cam_node.dir/rule
 usb_cam_node/fast:
 	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/usb_cam_node.dir/build.make usb_cam/CMakeFiles/usb_cam_node.dir/build
 .PHONY : usb_cam_node/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_eus: usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-
-.PHONY : std_srvs_generate_messages_eus
-
-# fast build rule for target.
-std_srvs_generate_messages_eus/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/build
-.PHONY : std_srvs_generate_messages_eus/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_nodejs: usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_srvs_generate_messages_nodejs
-
-# fast build rule for target.
-std_srvs_generate_messages_nodejs/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
-.PHONY : std_srvs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_py: usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-
-.PHONY : std_srvs_generate_messages_py
-
-# fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	cd /home/chranos/ROS/ROS_drone/build && $(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
 
 # Convenience name for target.
 usb_cam/CMakeFiles/usb_cam.dir/rule:
@@ -707,45 +257,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... std_srvs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... install/strip"
 	@echo "... usb_cam_node"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... edit_cache"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... list_install_components"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... rebuild_cache"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... install/local"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... std_srvs_generate_messages_eus"
-	@echo "... test"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... std_srvs_generate_messages_nodejs"
-	@echo "... std_srvs_generate_messages_py"
 	@echo "... usb_cam"
+	@echo "... test"
+	@echo "... list_install_components"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... nodes/usb_cam_node.o"
 	@echo "... nodes/usb_cam_node.i"
 	@echo "... nodes/usb_cam_node.s"

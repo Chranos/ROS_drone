@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bd966948-afb8-4f0a-a186-4ac597959a4c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ProjectId" id="1vX4QAHwkZrqLI9M53eet8DLi9k" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../transbot_config_camera" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.03_machine_move">
+    <configuration name="00_transbot_move" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="transbot_description" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/00_transbot_move.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="01_random_move" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="transbot_description" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/01_random_move.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="03_machine_move" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="transbot_description" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/03_machine_move.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.00_transbot_move" />
+      <item itemvalue="Python.01_random_move" />
+      <item itemvalue="Python.03_machine_move" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.03_machine_move" />
+        <item itemvalue="Python.01_random_move" />
+        <item itemvalue="Python.00_transbot_move" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd966948-afb8-4f0a-a186-4ac597959a4c" name="Default Changelist" comment="" />
+      <created>1626695080547</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626695080547</updated>
+      <workItem from="1626695081993" duration="516000" />
+      <workItem from="1632282759190" duration="98000" />
+      <workItem from="1632282959565" duration="116000" />
+      <workItem from="1632283211949" duration="4681000" />
+      <workItem from="1632291182080" duration="1752000" />
+      <workItem from="1632294620669" duration="1606000" />
+      <workItem from="1632296527845" duration="1283000" />
+      <workItem from="1632298184521" duration="8307000" />
+      <workItem from="1632314127309" duration="1130000" />
+      <workItem from="1632316759075" duration="60000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="743" y="264" width="424" height="484" key="FileChooserDialogImpl" timestamp="1632310592243">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1632310592243" />
+    <state x="743" y="278" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.988@0.27.1920.988" timestamp="1626695596983" />
+    <state width="1874" height="125" key="GridCell.Tab.0.bottom" timestamp="1632297761317">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1874" height="125" key="GridCell.Tab.0.bottom/0.27.1920.988@0.27.1920.988" timestamp="1632297761317" />
+    <state width="1874" height="125" key="GridCell.Tab.0.center" timestamp="1632297761316">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1874" height="125" key="GridCell.Tab.0.center/0.27.1920.988@0.27.1920.988" timestamp="1632297761316" />
+    <state width="1874" height="125" key="GridCell.Tab.0.left" timestamp="1632297761316">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1874" height="125" key="GridCell.Tab.0.left/0.27.1920.988@0.27.1920.988" timestamp="1632297761316" />
+    <state width="1874" height="125" key="GridCell.Tab.0.right" timestamp="1632297761316">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state width="1874" height="125" key="GridCell.Tab.0.right/0.27.1920.988@0.27.1920.988" timestamp="1632297761316" />
+    <state x="449" y="135" key="SettingsEditor" timestamp="1632300666594">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="449" y="135" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1632300666594" />
+    <state x="449" y="155" key="SettingsEditor/0.27.1920.988@0.27.1920.988" timestamp="1632282822365" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1632314666837">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1632314666837" />
+  </component>
+</project>

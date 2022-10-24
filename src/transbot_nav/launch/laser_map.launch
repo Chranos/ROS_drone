@@ -1,0 +1,48 @@
+<launch>
+    <arg name="use_gui" default="false"/>
+    <arg name="open_rviz" default="true"/>
+    <!--arg name="lidar_type" default="X3" doc="lidar_type type [a1,a2,a3,s1,s2,X3]"/-->
+    <arg name="robot_model" default="astra" doc="robot_model type [astra,camera]"/>
+    <arg name="map_type" default="gmapping" doc="opt: gmapping,hector,karto,cartographer"/>
+    <arg name="temporalUpdate" default="0.1" if="$(eval arg('map_type') == 'gmapping')"/>
+    <arg name="frame_id" default="laser"/>
+    <arg name="scan_topic" default="scan" />
+    <arg name="view_map" default="view_map"/>
+    <!--include file="$(find transbot_nav)/launch/library/rplidar.launch">
+        <arg name="lidar_type" value="$(arg lidar_type)" />
+    </include-->
+    <include file="$(find ydlidar_ros_driver)/launch/X2.launch"/>
+    <!-- 手机app通讯节点 -->
+    <include file="$(find transbot_nav)/launch/library/app.launch"/>
+    <!-- 仿真模型 -->
+    <param name="robot_description"
+           command="$(find xacro)/xacro '$(find transbot_description)/urdf/transbot_$(arg robot_model).urdf'"/>
+    <!-- GUI可调界面 -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" if="$(eval arg('use_gui') == 'true')"/>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" unless="$(eval arg('use_gui') == 'true')"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    <node pkg="tf" type="static_transform_publisher" name="odom_to_base_footprint"
+          args="0.0 0 0.0 0 0 0 /odom /base_footprint 100"/>
+    <!-- 激光雷达的坐标系-->
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser"
+          args="0 0 0 0 0 0  /base_footprint /$(arg frame_id)  30"/>
+    <!--node pkg="tf" type="static_transform_publisher" name="laser_link_to_laser"
+          args="0 0 0 6.28 0 0  /laser_link /laser  30"/-->
+    <!-- 建图节点 -->
+    <group if="$(eval arg('map_type') == 'gmapping')">
+        <node pkg="transbot_nav" type="scan_compression.py" name="scan_compression"/>
+        <include file="$(find transbot_nav)/launch/library/gmapping.launch">
+            <arg name="scan_topic" value="$(arg scan_topic)" />
+            <arg name="temporalUpdate" value="$(arg temporalUpdate)"/>
+        </include>
+    </group>
+    <group unless="$(eval arg('map_type') == 'gmapping')">
+        <include file="$(find cartographer_ros)/launch/laser.launch" if="$(eval arg('map_type') == 'cartographer')"/>
+        <include file="$(find transbot_nav)/launch/library/$(arg map_type).launch" unless="$(eval arg('map_type') == 'cartographer')"/>
+    </group>
+    <!-- rviz可视化节点 -->
+    <group if="$(arg open_rviz)">
+        <include file="$(find transbot_nav)/launch/view/view_laser_cartographer.launch" if="$(eval arg('map_type') == 'cartographer')"/>
+        <include file="$(find transbot_nav)/launch/view/$(arg view_map).launch" unless="$(eval arg('map_type') == 'cartographer')"/>
+    </group>
+</launch>

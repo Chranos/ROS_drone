@@ -1,0 +1,4 @@
+<launch>
+    <!--这个功能包的路径是：/opt/ros/melodic/share/cartographer_ros-->
+    <include file="$(find cartographer_ros)/launch/transbot_cartographer.launch"/>
+</launch>

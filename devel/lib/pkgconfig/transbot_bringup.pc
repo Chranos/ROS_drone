@@ -1,0 +1,8 @@
+prefix=/home/chranos/ROS/ROS_drone/devel
+
+Name: transbot_bringup
+Description: Description of transbot_bringup
+Version: 0.0.0
+Cflags: -I/home/chranos/ROS/ROS_drone/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rosmsg rospy tf nav_msgs geometry_msgs dynamic_reconfigure

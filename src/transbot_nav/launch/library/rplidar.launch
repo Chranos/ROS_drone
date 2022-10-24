@@ -1,0 +1,6 @@
+<launch>
+    <arg name="lidar_type" default="a1" doc="lidar_type type [a1,a2,a3,s1,s2]"/>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch">
+        <arg name="lidar_type" value="$(arg lidar_type)"/>
+    </include>
+</launch>

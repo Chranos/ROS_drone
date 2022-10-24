@@ -1,0 +1,9 @@
+<launch>
+    <!-- 启动base.launch文件 -->
+    <!--arg name="lidar_type" default="a1" doc="lidar_type type [a1,a2,a3,s1,s2]"/-->
+    <include file="$(find transbot_laser)/launch/base.launch">
+        <!--arg name="lidar_type" value="$(arg lidar_type)"/-->
+    </include>
+    <!-- 启动激光雷达警卫节点 -->
+    <node name='laser_Warning' pkg="transbot_laser" type="laser_Warning.py" required="true" output="screen"/>
+</launch>

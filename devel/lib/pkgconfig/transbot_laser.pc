@@ -1,0 +1,8 @@
+prefix=/home/chranos/ROS/ROS_drone/devel
+
+Name: transbot_laser
+Description: Description of transbot_laser
+Version: 0.0.0
+Cflags: -I/home/chranos/ROS/ROS_drone/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

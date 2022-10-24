@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 发布底层信息 -->
+    <node pkg="transbot_bringup" type="transbot_driver.py" name="transbot_node" required="true" output="screen">
+        <param name="imu" value="/transbot/imu"/>
+        <param name="vel" value="/transbot/get_vel"/>
+    </node>
+    <!-- 校准imu安装时的一些误差 -->
+    <node pkg="imu_calib" type="do_calib" name="do_calib" output="screen" required="True">
+        <param name="output_file" value="$(find transbot_bringup)/param/imu/imu_calib.yaml"/>
+    </node>
+</launch>

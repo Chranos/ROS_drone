@@ -1,0 +1,12 @@
+<launch>
+    <!--arg name="lidar_type" default="a1" doc="lidar_type type [a1,a2,a3,s1,s2]"/>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch">
+        <arg name="lidar_type" value="$(arg lidar_type)"/>
+    </include-->
+
+    <include file="$(find transbot_bringup)/launch/bringup.launch"/>
+    <include file="$(find ydlidar_ros_driver)/launch/X2.launch"/>
+    <!-- 激光雷达的坐标系-->
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser"
+          args="-0.03 0 0.13 3.1416 0 0  /base_link /laser  30"/>
+</launch>
