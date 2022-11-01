@@ -42,7 +42,7 @@ double camH = 720;
 bool methodadj = false;
 double H;
 double xC,yC;
-
+double h;
 
 void targetCapture(const darknet_ros_msgs::BoundingBoxes::ConstPtr &msg){
     
@@ -51,14 +51,18 @@ void targetCapture(const darknet_ros_msgs::BoundingBoxes::ConstPtr &msg){
 		double ymin = msg->bounding_boxes[0].ymin;
 		double xmax = msg->bounding_boxes[0].xmax;
 		double ymax = msg->bounding_boxes[0].ymax;
+		double centerx  = camW/2;
+        double centery = camH/2;
+        double boxcenterx = (xmin+xmax)/2;
+        double boxcentery = (ymin+ymax)/2;
     	if(!methodadj){
-    		double centerx  = camW/2;
-        	double centery = camH/2;
         	double xadj = camW/10;
         	double yadj = camH/10;
-        	double boxcenterx = (xmin+xmax)/2;
-        	double boxcentery = (ymin+ymax)/2;
 		}	
+		else {
+			double xadj = H*xc/h;
+			double yadj = H*yc/h;
+		}
     // # wait for adjust 
     //     # Width/Height      : 1280/720
     
