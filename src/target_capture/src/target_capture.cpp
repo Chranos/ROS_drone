@@ -38,60 +38,71 @@ double camW = 1280;
 double camH = 720;
 
 
+/*if drone fly too high */
+bool methodadj = false;
+double H;
+double xC,yC;
+double h;
+
 void targetCapture(const darknet_ros_msgs::BoundingBoxes::ConstPtr &msg){
     
-    
-    double xmin = msg->bounding_boxes[0].xmin;
-	double ymin = msg->bounding_boxes[0].ymin;
-	double xmax = msg->bounding_boxes[0].xmax;
-	double ymax = msg->bounding_boxes[0].ymax;
-
+    if(msg->bounding_boxed[0].probability>0.5){
+    	double xmin = msg->bounding_boxes[0].xmin;
+		double ymin = msg->bounding_boxes[0].ymin;
+		double xmax = msg->bounding_boxes[0].xmax;
+		double ymax = msg->bounding_boxes[0].ymax;
+		double centerx  = camW/2;
+        double centery = camH/2;
+        double boxcenterx = (xmin+xmax)/2;
+        double boxcentery = (ymin+ymax)/2;
+    	if(!methodadj){
+        	double xadj = camW/10;
+        	double yadj = camH/10;
+		}	
+		else {
+			double xadj = H*xc/h;
+			double yadj = H*yc/h;
+		}
     // # wait for adjust 
     //     # Width/Height      : 1280/720
     
-    string s = msg ->bounding_boxes[0].Class;
-    if(s=="end"){
-        movz = 0.1;
-        cout<<"down"<<endl;
-    } 
-    else if(s=="bridge"||s=="tent"||s=="barracks"||s=="car"||s=="tank"){
-        double centerx  = camW/2;
-        double centery = camH/2;
-        double xadj = 10;
-        double yadj = 10;
-        double boxcenterx = (xmin+xmax)/2;
-        double boxcentery = (ymin+ymax)/2;
+    	string s = msg ->bounding_boxes[0].Class;
+    	if(s=="end"){
+    	    movz = 0.1;
+   	     	cout<<"down"<<endl;
+  	  	} 
+    	else if(s=="bridge"||s=="tent"||s=="barracks"||s=="car"||s=="tank"){
        // double movex = 0.1;
        // double movey = 0.1;
-        if(centerx-boxcenterx>xadj){// > 0  left
-            movx = -0.1;
-            cout<<"turn left!"<<endl;
-        }
-        else if(centerx-boxcenterx<-xadj){//<0 right
-            movx = 0.1;
-            cout<<"turn right !"<<endl;
-        }
-        else {
-            movx = 0;
-            cout<<"xstop"<<endl;
-        }
+        	if(centerx-boxcenterx>xadj){// > 0  left
+            	movx = -0.1;
+            	cout<<"turn left!"<<endl;
+        	}
+        	else if(centerx-boxcenterx<-xadj){//<0 right
+            	movx = 0.1;
+            	cout<<"turn right !"<<endl;
+        	}
+        	else {
+            	movx = 0;
+            	cout<<"xstop"<<endl;
+        	}
 
-        if(centery-boxcentery>yadj){// > 0  back
-            movy = -0.1;
-            cout<<"go back"<<endl;
-        }
-        else if(centery-boxcentery<-yadj){//<0 straight
-            movy = 0.1;
-            cout<<"go straight!"<<endl;
-        }
-        else {
-            movy = 0;
-            cout<<"ystop"<<endl;
-        }
+        	if(centery-boxcentery>yadj){// > 0  back
+            	movy = -0.1;
+            	cout<<"go back"<<endl;
+        	}
+        	else if(centery-boxcentery<-yadj){//<0 straight
+            	movy = 0.1;
+            	cout<<"go straight!"<<endl;
+        	}
+        	else {
+            	movy = 0;
+            	cout<<"ystop"<<endl;
+        	}
         
-    }
-
-
+    	}
+	}
+    
 }
 
  void pos_target(const mavros_msgs::PositionTarget::ConstPtr& msg)
