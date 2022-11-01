@@ -34,8 +34,8 @@ double movx = 0;
 double movy = 0;
 double movz = 0;
 /*Camera size*/
-double camW = 1280;
-double camH = 720;
+double camW = 640;
+double camH = 480;
 
 
 /*if drone fly too high */
@@ -63,9 +63,19 @@ void targetCapture(const darknet_ros_msgs::BoundingBoxes::ConstPtr &msg){
 			double xadj = H*xc/h;
 			double yadj = H*yc/h;
 		}
+
     // # wait for adjust 
-    //     # Width/Height      : 1280/720
-    
+    //     # Width/Height      : 640/480
+    //     cout<<"xmax:"<<xmax<<endl;
+     //   cout<<"xmin:"<<xmin<<endl;
+      //  cout<<"ymax:"<<ymax<<endl;
+       // cout<<"ymin:"<<ymin<<endl;
+       // cout<<"centerx:"<<centerx<<endl;
+       // cout<<"boxcenterx: "<<boxcenterx<<endl;
+       // cout<<"centery:"<<centery<<endl;
+       //  cout<<"boxcentery: "<<boxcentery<<endl;
+       // double movex = 0.1;
+       // double movey = 0.1;
     	string s = msg ->bounding_boxes[0].Class;
     	if(s=="end"){
     	    movz = 0.1;
